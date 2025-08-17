@@ -1,0 +1,12 @@
+alerts = [
+    "GDPR Alert: Consent required for EU user",
+    "AML Alert: High-value transaction by alice"
+]
+
+def generate_report(alerts):
+    report = "\n".join(alerts)
+    with open("compliance_report.txt", "w") as f:
+        f.write(report)
+    return "Report generated"
+
+print(generate_report(alerts))
